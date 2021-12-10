@@ -1,0 +1,262 @@
+:root {
+  --color-dark: 230 35% 7%;
+  --color-accent: 231 77% 90%;
+  --color-white: 0 0% 100%;
+  --flex-gap: 1rem;
+  --family-sans: 'Barlow', sans-serif;
+  --family-condensed: 'Barlow Condensed', sans-serif;
+  --family-serif: 'Bellefair', serif;
+
+  --font-size-900: 10rem;
+  --font-size-800: 6.311rem;
+  --font-size-700: 3.982rem;
+  --font-size-600: 2.512rem;
+  --font-size-500: 1.585rem;
+  --font-size-400: 1rem;
+  --font-size-300: 0.631rem;
+}
+
+.fs-900 {
+  font-size: var(--font-size-900);
+}
+.fs-800 {
+  font-size: var(--font-size-800);
+}
+.fs-700 {
+  font-size: var(--font-size-700);
+}
+.fs-600 {
+  font-size: var(--font-size-600);
+}
+.fs-500 {
+  font-size: var(--font-size-500);
+}
+.fs-400 {
+  font-size: var(--font-size-400);
+}
+.fs-300 {
+  font-size: var(--font-size-300);
+}
+
+body {
+  background-color: hsl(var(--color-dark));
+  color: hsl(var(--color-white));
+  font-family: var(--family-serif);
+}
+
+.App {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/*
+* Utility
+*/
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap);
+  &.column {
+    flex-direction: column;
+  }
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+  &.grow > * {
+    flex-grow: 1;
+  }
+  &.apart {
+    justify-content: space-between;
+  }
+  .flow {
+    flex-basis: 100%;
+  }
+
+  &.nogap {
+    gap: 0;
+  }
+}
+
+.grid {
+  display: grid;
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.number {
+  color: hsl(var(--color-accent) / 0.25);
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.condensed,
+.cond {
+  font-family: var(--family-condensed);
+}
+
+.serif {
+  font-family: var(--family-serif);
+}
+
+.sans {
+  font-family: var(--family-sans);
+}
+
+.ls-1 {
+  letter-spacing: 4.75px;
+}
+.ls-2 {
+  letter-spacing: 2.7px;
+}
+.ls-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.colorbox {
+  .box {
+    min-height: 8rem;
+    background-color: var(--color);
+    border: 1px solid hsl(var(--color-accent));
+    position: relative;
+    p {
+      mix-blend-mode: difference;
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem;
+    }
+  }
+}
+
+.span-accent {
+  span {
+    color: hsl(var(--color-accent));
+    margin-right: 2em;
+  }
+}
+
+.main-nav {
+  background-color: hsl(var(--color-accent) / 0.04);
+  padding: 0 2rem;
+}
+
+li {
+  cursor: pointer;
+  padding: 2rem 0.5rem;
+  border-bottom: 5px transparent solid;
+  &:hover {
+    border-bottom-color: hsl(var(--color-accent) / 0.5);
+  }
+
+  &:active,
+  &:focus,
+  &.active {
+    border-bottom-color: hsl(var(--color-accent));
+  }
+}
+
+.text-dark {
+  color: hsl(var(--color-dark));
+}
+
+.text-white {
+  color: hsl(var(--color-white));
+}
+
+.text-accent {
+  color: hsl(var(--color-accent));
+}
+
+.bg-dark {
+  background-color: hsl(var(--color-dark));
+}
+
+.bg-white {
+  background-color: hsl(var(--color-white));
+}
+
+.bg-accent {
+  background-color: hsl(var(--color-accent));
+}
+
+.explore-btn {
+  position: relative;
+  display: inline-grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: hsl(var(--color-white) / 0.15);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear, transform 0.75s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dot {
+  min-height: 1rem;
+  aspect-ratio: 1;
+  background-color: hsl(var(--color-white) / 0.17);
+  border-radius: 100%;
+  &:hover {
+    background-color: hsl(var(--color-white) / 0.5);
+  }
+
+  &:active,
+  &:focus,
+  &.active {
+    background-color: hsl(var(--color-white));
+  }
+}
+
+.number-slider {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 4rem;
+    aspect-ratio: 1;
+    border: 1px solid;
+    border-color: hsl(var(--color-white) / 0.17);
+    border-radius: 100%;
+    &:hover {
+      border-color: hsl(var(--color-white) / 0.5);
+    }
+
+    &:active,
+    &:focus,
+    &.active {
+      background-color: hsl(var(--color-white));
+      color:hsl(var(--color-dark));
+      border-color: hsl(var(--color-white));
+    }
+  }
+}
