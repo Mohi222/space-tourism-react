@@ -1,18 +1,37 @@
-import Heading from './Heading.jsx';
+import Image from 'next/image';
+import { useState } from 'react';
 
-const Nav = ({ children }) => (
-  <ul className="main-nav flex center" style={{ '--flex-gap': '8rem' }}>
-    {children}
-  </ul>
-);
+import HamburgerIcon from '../public/assets/shared/icon-hamburger.svg';
+import Text from './Text';
 
-const Text = ({ children, number, active = false }) => (
+const Nav = ({ children }) => {
+  const [shown, setShown] = useState(false);
+  const toggleHandler = () => setShown(!shown);
+  return (
+    <div>
+      <ul className={`main-nav flex ${shown ? 'shown' : ''}`}>{children}</ul>
+      <MobileToggle onClick={toggleHandler} />
+    </div>
+  );
+};
+
+const NavText = ({ children, number, active = false }) => (
   <li className={`${active ? 'active' : ''}`}>
-    <Heading size="500">
+    <Text size="400" uppercase="true" family="cond" color="accent" spacing="1">
       {number && <span className="number text-white">{number}</span>} {children}
-    </Heading>
+    </Text>
   </li>
 );
 
-Nav.Text = Text;
+Nav.Text = NavText;
+
+const MobileToggle = ({ onClick }) => {
+  return (
+    <button className="nav-toggle" type="button" onClick={onClick}>
+      <Image src={HamburgerIcon} width={24} height={24} />
+    </button>
+  );
+};
+
+Nav.MobileToggle = MobileToggle;
 export default Nav;

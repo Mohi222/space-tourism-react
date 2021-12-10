@@ -2,7 +2,7 @@ const Text = ({
   children,
   size = '400',
   family = 'serif',
-  color = 'black',
+  color = 'white',
   uppercase = false,
   spacing = '0',
   className = '',

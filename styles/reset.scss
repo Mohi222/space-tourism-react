@@ -81,3 +81,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+html, body, #__next, .App {
+  height: 100%;
+}
+
+p {
+  max-width: 45ch;
+}
