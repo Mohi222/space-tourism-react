@@ -7,6 +7,7 @@ const Heading = ({
   family = 'serif',
   color = 'black',
   spacing = '0',
+  number = '',
   className = '',
 }) => {
   if (size === '500')
@@ -18,6 +19,7 @@ const Heading = ({
         color="accent"
         spacing="1"
         className={className}
+        number={number}
       >
         {children}
       </Text>
@@ -30,6 +32,7 @@ const Heading = ({
       color={color}
       spacing={spacing}
       className={className}
+      number={number}
     >
       {children}
     </Text>

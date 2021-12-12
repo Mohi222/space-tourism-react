@@ -15,7 +15,9 @@ export default function Home() {
             Home
           </Nav.Text>
           <Nav.Text number="01">Destinations</Nav.Text>
-          <Nav.Text number="02">Crew</Nav.Text>
+          <Nav.Text number="02" href="/crew">
+            Crew
+          </Nav.Text>
           <Nav.Text number="03">Technology</Nav.Text>
         </Nav>
       </header>

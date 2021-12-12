@@ -3,6 +3,7 @@
   --color-accent: 231 77% 90%;
   --color-white: 0 0% 100%;
   --flex-gap: 1rem;
+  --grid-gap: 8rem;
   --family-sans: 'Barlow', sans-serif;
   --family-condensed: 'Barlow Condensed', sans-serif;
   --family-serif: 'Bellefair', serif;
@@ -113,6 +114,19 @@ body {
   &.nogap {
     gap: 0;
   }
+  &.desktopLeft {
+    @include desktop {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &.mobileCenter {
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .center {
@@ -195,6 +209,10 @@ body {
 
 .text-accent {
   color: hsl(var(--color-accent));
+}
+
+.text-role {
+  color: hsl(var(--color-accent) / .5);
 }
 
 .bg-dark {
@@ -308,6 +326,20 @@ button {
 
   @include tablet {
     background-image: url('/assets/home/background-home-tablet.jpg');
+  }
+}
+
+.container.crew {
+  background: transparent no-repeat center center;
+  background-image: url('/assets/crew/background-crew-mobile.jpg');
+  background-size: cover;
+
+  @include desktop {
+    background-image: url('/assets/crew/background-crew-desktop.jpg');
+  }
+
+  @include tablet {
+    background-image: url('/assets/crew/background-crew-tablet.jpg');
   }
 }
 
@@ -432,5 +464,32 @@ main {
     p {
       text-align: left;
     }
+  }
+}
+
+.image-container {
+  position: relative;
+  width: clamp(12rem, 30vw, 32rem);
+}
+
+.crew main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem var(--grid-gap);
+  @include mobile {
+    grid-template-areas: "title" "image" "dots" "text";
+  }
+  @include tablet {
+    grid-template-areas: "title" "text" "dots" "image";
+    span.number {
+      display: inline-block;
+    }
+  }
+
+  @include desktop {
+    grid-template-areas: "title image" "text image" "dots image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
   }
 }

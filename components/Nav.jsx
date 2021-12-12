@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import HamburgerIcon from '../public/assets/shared/icon-hamburger.svg';
@@ -15,11 +16,22 @@ const Nav = ({ children }) => {
   );
 };
 
-const NavText = ({ children, number, active = false }) => (
+const NavText = ({ children, number, active = false, href }) => (
   <li className={`${active ? 'active' : ''}`}>
-    <Text size="400" uppercase="true" family="cond" color="accent" spacing="1">
-      {number && <span className="number text-white">{number}</span>} {children}
-    </Text>
+    <Link href={href || '#'}>
+      <a>
+        <Text
+          size="400"
+          uppercase="true"
+          family="cond"
+          color="accent"
+          spacing="1"
+        >
+          {number && <span className="number text-white">{number}</span>}{' '}
+          {children}
+        </Text>
+      </a>
+    </Link>
   </li>
 );
 
