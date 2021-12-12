@@ -1,5 +1,3 @@
-import '../styles/index.module.scss';
-
 import ExploreBtn from '../components/ExploreBtn';
 import Heading from '../components/Heading';
 import Logo from '../components/Logo';

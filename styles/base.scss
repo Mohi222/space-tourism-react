@@ -217,8 +217,10 @@ body {
   padding: 0 2em;
   border-radius: 50%;
   aspect-ratio: 1;
+  min-height: 14rem;
   text-decoration: none;
   margin: 4rem;
+
 
   &:after {
     content: '';
@@ -237,6 +239,7 @@ body {
     }
   }
 }
+
 
 button {
   background-color: transparent;
@@ -314,7 +317,7 @@ button {
     display: block;
   }
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   right: 2rem;
   z-index: 1000;
 }
@@ -322,7 +325,7 @@ button {
 .logo {
   @include mobile {
     position: absolute;
-    top: 1rem;
+    top: 0;
     left: 2rem;
   }
   min-height: 3rem;
