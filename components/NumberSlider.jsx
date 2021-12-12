@@ -2,19 +2,29 @@ import { cloneElement } from 'react';
 
 import Text from './Text';
 
-const NumberSlider = ({ children }) => (
-  <div
-    className="number-slider flex column center"
-    style={{ '--flex-gap': '2rem' }}
-  >
+const NumberSlider = ({
+  children,
+  active: { activeSlider, sliderChangeHandler },
+}) => (
+  <div className="number-slider flex center" style={{ '--flex-gap': '2rem' }}>
     {children.map((child, i) => (
-      <>{cloneElement(child, { number: i + 1 })}</>
+      <>
+        {cloneElement(child, {
+          active: i === activeSlider,
+          number: i + 1,
+          clickHandler: () => sliderChangeHandler(i),
+        })}
+      </>
     ))}
   </div>
 );
 
-const Button = ({ active = false, number }) => (
-  <button type="button" className={` ${active ? 'active' : ''}`}>
+const Button = ({ active = false, number, clickHandler }) => (
+  <button
+    type="button"
+    className={` ${active ? 'active' : ''}`}
+    onClick={clickHandler}
+  >
     <Text size="500">{number}</Text>
   </button>
 );

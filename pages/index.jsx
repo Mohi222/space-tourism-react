@@ -1,4 +1,5 @@
 import ExploreBtn from '../components/ExploreBtn';
+import Header from '../components/Header';
 import Heading from '../components/Heading';
 import Logo from '../components/Logo';
 import Nav from '../components/Nav';
@@ -8,19 +9,7 @@ import Text from '../components/Text';
 export default function Home() {
   return (
     <div className="home container flex column center apart fill">
-      <header className="flex apart" style={{ '--flex-gap': '0' }}>
-        <Logo />
-        <Nav>
-          <Nav.Text number="00" active>
-            Home
-          </Nav.Text>
-          <Nav.Text number="01">Destinations</Nav.Text>
-          <Nav.Text number="02" href="/crew">
-            Crew
-          </Nav.Text>
-          <Nav.Text number="03">Technology</Nav.Text>
-        </Nav>
-      </header>
+      <Header />
       <Space h="2rem" />
       <main className="flex center" style={{ '--flex-gap': '2rem' }}>
         {/* I donno why but when using Text component, the font-size is not working */}

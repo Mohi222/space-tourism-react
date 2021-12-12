@@ -16,8 +16,8 @@ const Nav = ({ children }) => {
   );
 };
 
-const NavText = ({ children, number, active = false, href }) => (
-  <li className={`${active ? 'active' : ''}`}>
+const NavText = ({ children, number, active = false, href, className }) => (
+  <li className={className}>
     <Link href={href || '#'}>
       <a>
         <Text

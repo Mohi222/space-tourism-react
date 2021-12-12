@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 import Dot from '../components/Dot';
 import ExploreBtn from '../components/ExploreBtn';
+import Header from '../components/Header';
 import Heading from '../components/Heading';
 import Logo from '../components/Logo';
 import Nav from '../components/Nav';
@@ -28,17 +29,7 @@ export default function Crew() {
   console.log(crewData);
   return (
     <div className="crew container flex column center apart fill">
-      <header className="flex apart" style={{ '--flex-gap': '0' }}>
-        <Logo />
-        <Nav>
-          <Nav.Text number="00" active>
-            Home
-          </Nav.Text>
-          <Nav.Text number="01">Destinations</Nav.Text>
-          <Nav.Text number="02">Crew</Nav.Text>
-          <Nav.Text number="03">Technology</Nav.Text>
-        </Nav>
-      </header>
+      <Header />
       <Space h="2rem" />
       <main>
         <div className="flex mobileCenter" style={{ gridArea: 'title' }}>
