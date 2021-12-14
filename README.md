@@ -1,29 +1,28 @@
-# Example app with [linaria](https://linaria.dev/)
+# Frontend Mentor - Space tourism website solution
 
-This example features how to use [linaria](https://linaria.dev/) as the styling solution instead of [styled-jsx](https://github.com/vercel/styled-jsx).
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-We are creating three `div` elements with custom styles being shared across the elements. The styles includes the use of pseudo-selector and CSS animations.
+## Overview
 
-## Preview
+### The challenge
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Users should be able to:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-linaria)
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-## Deploy your own
+## Built with
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- Mobile-first workflow
+- CSS Grids
+### What I learned
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-linaria&project-name=with-linaria&repository-name=with-linaria)
+- I got better understanding of React components and learned how to make nested components
+- Thanks to Kewin i learned new CSS features like :focus-whitin @supports etc...
+- I learned on how to use CSS Grids and make my life easier
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-linaria with-linaria-app
-# or
-yarn create next-app --example with-linaria with-linaria-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+**Still have a lot to learn**
