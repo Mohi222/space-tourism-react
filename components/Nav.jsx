@@ -37,13 +37,11 @@ const NavText = ({ children, number, active = false, href, className }) => (
 
 Nav.Text = NavText;
 
-const MobileToggle = ({ onClick }) => {
-  return (
-    <button className="nav-toggle" type="button" onClick={onClick}>
-      <Image src={HamburgerIcon} width={24} height={24} />
-    </button>
-  );
-};
+const MobileToggle = ({ onClick }) => (
+  <button className="nav-toggle" type="button" onClick={onClick}>
+    <Image src={HamburgerIcon} width={24} height={24} />
+  </button>
+);
 
 Nav.MobileToggle = MobileToggle;
 export default Nav;

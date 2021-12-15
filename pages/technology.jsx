@@ -29,18 +29,17 @@ export default function Technology() {
   }, [activeSlider]);
   console.log(technologyData);
   return (
-    <div className="technology container flex column center apart fill">
+    <div className="technology container flex column apart fill">
       <Header />
       <Space h="2rem" />
+      <div className="pageTitle flex mobileCenter">
+        <Heading size="400" family="cond" spacing="1" number="03">
+          Space Launch 101
+        </Heading>
+      </div>
+      <Space h="1rem" />
+
       <main>
-        <div
-          className="flex mobileCenter"
-          style={{ gridArea: 'title', alignSelf: 'start' }}
-        >
-          <Heading size="400" family="cond" spacing="1" number="03">
-            Space Launch 101{' '}
-          </Heading>
-        </div>
         <div
           className="flex column center"
           style={{ gridArea: 'image', '--flex-gap': 0 }}

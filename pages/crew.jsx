@@ -28,15 +28,17 @@ export default function Crew() {
   }, [activeSlider]);
   console.log(crewData);
   return (
-    <div className="crew container flex column center apart fill">
+    <div className="crew container flex column apart fill">
       <Header />
       <Space h="2rem" />
+      <div className="pageTitle flex mobileCenter">
+        <Heading size="400" family="cond" spacing="1" number="02">
+          Meet your crew
+        </Heading>
+      </div>
+      <Space h="1rem" />
+
       <main>
-        <div className="flex mobileCenter" style={{ gridArea: 'title' }}>
-          <Heading size="400" family="cond" spacing="1" number="02">
-            Meet your crew
-          </Heading>
-        </div>
         <div
           className="flex column center"
           style={{ gridArea: 'image', '--flex-gap': 0 }}
