@@ -16,7 +16,7 @@ const Nav = ({ children }) => {
   );
 };
 
-const NavText = ({ children, number, active = false, href, className }) => (
+const NavText = ({ children, number, href, className }) => (
   <li className={className}>
     <Link href={href || '#'}>
       <a>
@@ -39,7 +39,7 @@ Nav.Text = NavText;
 
 const MobileToggle = ({ onClick }) => (
   <button className="nav-toggle" type="button" onClick={onClick}>
-    <Image src={HamburgerIcon} width={24} height={24} />
+    <Image src={HamburgerIcon} width={24} height={24} alt="" />
   </button>
 );
 

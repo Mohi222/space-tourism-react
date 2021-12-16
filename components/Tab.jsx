@@ -2,7 +2,10 @@ import { cloneElement } from 'react';
 
 import Heading from './Heading.jsx';
 
-const Tab = ({ children, active: { activeTab, tabChangeHandler } }) => (
+const Tab = ({
+  children,
+  active: { activeTab = 0, tabChangeHandler = () => {} },
+}) => (
   <ul className="tab flex center">
     {children.map((child, i) => (
       <>

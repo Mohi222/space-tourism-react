@@ -4,7 +4,7 @@ import Text from './Text';
 
 const NumberSlider = ({
   children,
-  active: { activeSlider, sliderChangeHandler },
+  active: { activeSlider = 0, sliderChangeHandler = () => {} },
 }) => (
   <div className="number-slider flex center" style={{ '--flex-gap': '2rem' }}>
     {children.map((child, i) => (

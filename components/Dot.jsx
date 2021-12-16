@@ -2,7 +2,7 @@ import { cloneElement } from 'react';
 
 const Slider = ({
   children,
-  active: { activeSlider, sliderChangeHandler },
+  active: { activeSlider = 0, sliderChangeHandler = () => {} },
 }) => (
   <div className="flex center" style={{ '--flex-gap': '2rem' }}>
     {children.map((child, i) => (

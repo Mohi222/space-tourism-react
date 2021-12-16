@@ -1,12 +1,8 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import Dot from '../components/Dot';
-import ExploreBtn from '../components/ExploreBtn';
 import Header from '../components/Header';
 import Heading from '../components/Heading';
-import Logo from '../components/Logo';
-import Nav from '../components/Nav';
 import NumberSlider from '../components/NumberSlider';
 import Space from '../components/Space';
 import Text from '../components/Text';

@@ -1,7 +1,7 @@
 import Logo from './Logo';
 import Nav from './Nav';
 
-const Header = ({ page }) => (
+const Header = () => (
   <header className="flex apart" style={{ '--flex-gap': '0' }}>
     <Logo />
     <Nav>
