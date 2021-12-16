@@ -1,0 +1,2 @@
+- [ ] split page specfic styles into files
+- [ ] make crew page more like figma design

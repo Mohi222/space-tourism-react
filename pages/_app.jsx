@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>With Linaria</title>
+        <title>Space tourism</title>
       </Head>
       <Component {...pageProps} />
     </Layout>

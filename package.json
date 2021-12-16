@@ -1,4 +1,7 @@
 {
+  "name": "space-tourism-react",
+  "version": "0.1.0",
+  "description": "a sloution for frontendmentor.io 's space tourism challenge with react",
   "private": true,
   "scripts": {
     "dev": "next",
